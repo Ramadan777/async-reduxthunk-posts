@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { loadPosts } from './actions'
+import './App.css'
 
 function App() {
   const posts = useSelector(state => state.posts);
@@ -14,9 +15,9 @@ function App() {
 
 
   return (
-    <div>
-      Posts:
-      <div>
+    <div className="main">
+      Список сообщений:
+      <div className="posts">
         {loading ? 'идет загрузка...' : (
           posts.map(item => {
             return (
